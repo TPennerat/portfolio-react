@@ -1,4 +1,65 @@
-.nav-tabs {
-    background-color: #003366;
-    color: #006699;
+/* GLOBAL STYLES */
+/* 
+Bleu foncé : rgb(0, 51, 102)
+Bleu clair : rgb(0, 102, 153)
+*/
+ 
+body {
+    font-family: 'Fira Sans', sans-serif; 
+    margin: 0;
+}
+
+.navigation a {
+   color: white;
+   font-weight: 300;
+   letter-spacing: 2px;
+   text-decoration: none;
+   background: rgb(0, 51, 102);
+   padding: 20px 5px;
+   display: inline-block;
+   width: 100%;
+   text-align: center;
+   transition-property: background;
+   transition-duration: .5s;
+}
+
+.navigation a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: white;
+    background: rgb(0, 102, 153);
+}
+
+.navigation ul {
+    margin: 0;
+}
+
+
+.navigation ul {
+   list-style: none;
+   padding: 0;
+   display: flex;
+}
+
+.navigation li {
+   flex: 3;    
+}
+
+@media all and (max-width: 1000px) {
+   .navigation li {
+      flex: 1 1 50%;
+   }
+}
+
+@media all and (max-width: 480px) {
+    .navigation ul {
+        flex-wrap: wrap;
+     }
+    
+   .navigation li {
+      flex-basis: 100%;
+   }
 }
